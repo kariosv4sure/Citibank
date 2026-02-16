@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Citi Private Bank</title>
     <style>
         * {
@@ -16,6 +16,8 @@
             background-color: #0A0A0F;
             color: #FFFFFF;
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Navigation */
@@ -23,7 +25,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 5%;
+            padding: 1rem 3%;
             background-color: #0F0F15;
             border-bottom: 1px solid #1E1E2A;
             position: sticky;
@@ -34,24 +36,24 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.3rem;
         }
 
         .logo-icon {
             background: linear-gradient(135deg, #0066B4, #003B6F);
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: white;
         }
 
         .logo-text {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 600;
             letter-spacing: -0.5px;
         }
@@ -62,14 +64,14 @@
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             align-items: center;
         }
 
         .nav-links a {
             color: #9A9AB0;
             text-decoration: none;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 500;
             transition: color 0.2s;
         }
@@ -82,10 +84,10 @@
             background: transparent;
             border: 1.5px solid #0066B4;
             color: #FFFFFF;
-            padding: 0.6rem 1.5rem;
+            padding: 0.5rem 1.2rem;
             border-radius: 30px;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             cursor: pointer;
             transition: all 0.2s;
         }
@@ -94,11 +96,9 @@
             background: #0066B4;
         }
 
-        /* Notification Badge */
         .notification-badge {
             position: relative;
             display: inline-block;
-            margin-right: 1rem;
         }
         
         .badge {
@@ -118,7 +118,7 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 5%;
+            padding: 0 3%;
         }
 
         /* Hero Section */
@@ -126,9 +126,9 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 4rem;
-            padding: 4rem 0;
-            min-height: 80vh;
+            gap: 3rem;
+            padding: 3rem 0;
+            min-height: 70vh;
         }
 
         .hero-content {
@@ -139,27 +139,27 @@
             background: rgba(0, 102, 180, 0.1);
             color: #0066B4;
             display: inline-block;
-            padding: 0.5rem 1rem;
+            padding: 0.4rem 0.8rem;
             border-radius: 30px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             border: 1px solid rgba(0, 102, 180, 0.3);
         }
 
         .hero-content h1 {
-            font-size: 3.5rem;
+            font-size: 2.8rem;
             line-height: 1.2;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             background: linear-gradient(to right, #FFFFFF, #B0B0C0);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .hero-content p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #9A9AB0;
-            margin-bottom: 2rem;
+            margin-bottom: 1.8rem;
             max-width: 500px;
         }
 
@@ -170,12 +170,12 @@
         }
 
         .stat-item h3 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: #0066B4;
         }
 
         .stat-item p {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             margin-bottom: 0;
             color: #6B6B85;
         }
@@ -183,8 +183,8 @@
         .hero-card {
             flex: 1;
             background: linear-gradient(145deg, #14141C, #0C0C14);
-            padding: 2rem;
-            border-radius: 30px;
+            padding: 1.8rem;
+            border-radius: 25px;
             border: 1px solid #252530;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease;
@@ -198,25 +198,25 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.8rem;
         }
 
         .card-chip {
-            width: 50px;
-            height: 40px;
+            width: 45px;
+            height: 35px;
             background: linear-gradient(135deg, #FFD700, #FFA500);
             border-radius: 8px;
         }
 
         .card-type {
             color: #9A9AB0;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .card-number {
-            font-size: 1.5rem;
-            letter-spacing: 4px;
-            margin-bottom: 2rem;
+            font-size: 1.3rem;
+            letter-spacing: 3px;
+            margin-bottom: 1.8rem;
             color: #FFFFFF;
         }
 
@@ -224,22 +224,22 @@
             display: flex;
             justify-content: space-between;
             color: #9A9AB0;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         /* Features */
         .features {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            padding: 4rem 0;
+            gap: 1.5rem;
+            padding: 3rem 0;
             border-top: 1px solid #1E1E2A;
         }
 
         .feature-item {
             background: #14141C;
-            padding: 2rem;
-            border-radius: 20px;
+            padding: 1.5rem;
+            border-radius: 18px;
             border: 1px solid #252530;
             transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
         }
@@ -251,67 +251,69 @@
         }
 
         .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
         }
 
         .feature-item h3 {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
+            font-size: 1.2rem;
         }
 
         .feature-item p {
             color: #9A9AB0;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         /* Auth Pages */
         .auth-container {
-            min-height: 90vh;
+            min-height: 85vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
+            padding: 1.5rem;
         }
 
         .auth-card {
             background: #14141C;
-            border-radius: 30px;
-            padding: 3rem;
+            border-radius: 25px;
+            padding: 2.5rem;
             width: 100%;
-            max-width: 450px;
+            max-width: 420px;
             border: 1px solid #252530;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
         }
 
         .auth-card h2 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
+            margin-bottom: 0.4rem;
         }
 
         .auth-subtitle {
             color: #9A9AB0;
-            margin-bottom: 2rem;
+            margin-bottom: 1.8rem;
+            font-size: 0.95rem;
         }
 
         .input-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.3rem;
         }
 
         .input-group label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
             color: #B0B0C0;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .input-group input {
             width: 100%;
-            padding: 1rem;
+            padding: 0.9rem;
             background: #0C0C14;
             border: 1px solid #252530;
-            border-radius: 12px;
+            border-radius: 10px;
             color: #FFFFFF;
-            font-size: 1rem;
+            font-size: 0.95rem;
             transition: all 0.2s;
         }
 
@@ -323,50 +325,30 @@
 
         .auth-button {
             width: 100%;
-            padding: 1rem;
+            padding: 0.9rem;
             background: #0066B4;
             color: white;
             border: none;
-            border-radius: 12px;
-            font-size: 1rem;
+            border-radius: 10px;
+            font-size: 0.95rem;
             font-weight: 600;
             cursor: pointer;
             transition: background 0.2s;
-            position: relative;
-            overflow: hidden;
         }
 
         .auth-button:hover {
             background: #005094;
         }
 
-        .auth-button:after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 5px;
-            height: 5px;
-            background: rgba(255, 255, 255, 0.5);
-            opacity: 0;
-            border-radius: 100%;
-            transform: scale(1, 1) translate(-50%);
-            transform-origin: 50% 50%;
+        .error-message {
+            color: #FF5C5C;
+            font-size: 0.85rem;
+            margin-top: 0.3rem;
+            display: none;
         }
 
-        .auth-button:focus:not(:active)::after {
-            animation: ripple 1s ease-out;
-        }
-
-        @keyframes ripple {
-            0% {
-                transform: scale(0, 0);
-                opacity: 0.5;
-            }
-            100% {
-                transform: scale(20, 20);
-                opacity: 0;
-            }
+        .error-message.show {
+            display: block;
         }
 
         /* OTP Modal */
@@ -381,6 +363,7 @@
             align-items: center;
             justify-content: center;
             z-index: 1000;
+            padding: 1rem;
         }
 
         .modal.active {
@@ -389,96 +372,106 @@
 
         .modal-content {
             background: #14141C;
-            padding: 2.5rem;
-            border-radius: 30px;
-            max-width: 400px;
-            width: 90%;
+            padding: 2rem;
+            border-radius: 25px;
+            max-width: 380px;
+            width: 100%;
             border: 1px solid #252530;
         }
 
         .modal-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+            margin-bottom: 0.4rem;
         }
 
         .otp-inputs {
             display: flex;
-            gap: 0.5rem;
-            margin: 2rem 0;
+            gap: 0.4rem;
+            margin: 1.8rem 0;
             justify-content: center;
+            flex-wrap: wrap;
         }
 
         .otp-input {
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             text-align: center;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             background: #0C0C14;
             border: 1px solid #252530;
-            border-radius: 10px;
+            border-radius: 8px;
             color: #FFFFFF;
-            transition: border-color 0.2s;
-        }
-
-        .otp-input:focus {
-            outline: none;
-            border-color: #0066B4;
         }
 
         .checkbox-group {
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            margin: 1.5rem 0;
-        }
-
-        .checkbox-group input {
-            width: 20px;
-            height: 20px;
-            accent-color: #0066B4;
+            margin: 1.2rem 0;
         }
 
         /* Dashboard */
         .dashboard {
-            padding: 2rem 5%;
+            padding: 1.5rem 3%;
+            flex: 1;
+            padding-bottom: 90px; /* Space for fixed bottom buttons */
         }
 
         .dashboard-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .welcome h1 {
-            font-size: 2rem;
-            margin-bottom: 0.3rem;
+            font-size: 1.6rem;
+            margin-bottom: 0.2rem;
         }
 
         .welcome p {
             color: #9A9AB0;
+            font-size: 0.9rem;
         }
 
-        /* Quick Actions */
+        /* NO USER MENU - REMOVED COMPLETELY */
+
+        /* Quick Actions - FIXED AT BOTTOM */
+        .quick-actions-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #0F0F15;
+            border-top: 1px solid #1E1E2A;
+            padding: 0.8rem 3%;
+            z-index: 90;
+        }
+
         .quick-actions {
             display: flex;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
+            gap: 0.8rem;
+            justify-content: space-around;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .quick-action-btn {
             background: #1E1E2A;
             border: 1px solid #252530;
             color: white;
-            padding: 0.8rem 1.5rem;
+            padding: 0.7rem 0;
             border-radius: 30px;
             font-weight: 600;
+            font-size: 0.9rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            justify-content: center;
+            gap: 0.4rem;
             cursor: pointer;
             transition: all 0.2s;
+            flex: 1;
+            max-width: 120px;
         }
 
         .quick-action-btn.primary {
@@ -498,18 +491,19 @@
         /* Dashboard Tabs */
         .dashboard-tabs {
             display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
             border-bottom: 1px solid #1E1E2A;
-            padding-bottom: 1rem;
+            padding-bottom: 0.8rem;
+            flex-wrap: wrap;
         }
 
         .tab-btn {
             background: transparent;
             border: none;
             color: #9A9AB0;
-            padding: 0.5rem 1.5rem;
-            font-size: 1rem;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.95rem;
             font-weight: 600;
             cursor: pointer;
             border-radius: 20px;
@@ -528,7 +522,6 @@
 
         .tab-content {
             display: none;
-            transition: opacity 0.3s ease;
         }
 
         .tab-content.active {
@@ -537,34 +530,36 @@
 
         .balance-card {
             background: linear-gradient(145deg, #1A1A24, #12121A);
-            padding: 2rem;
-            border-radius: 25px;
+            padding: 1.5rem;
+            border-radius: 20px;
             border: 1px solid #252530;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .balance-label {
             color: #9A9AB0;
             margin-bottom: 0.5rem;
+            font-size: 0.9rem;
         }
 
         .balance-amount {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             font-weight: 700;
             color: #FFFFFF;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
 
         .balance-amount span {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: #9A9AB0;
         }
 
         .account-info {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             color: #9A9AB0;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+            flex-wrap: wrap;
         }
 
         /* Portfolio Chart */
@@ -572,7 +567,7 @@
             background: #14141C;
             border-radius: 20px;
             padding: 1.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             border: 1px solid #252530;
         }
 
@@ -631,15 +626,18 @@
             font-size: 0.8rem;
         }
 
+        /* Transactions */
         .transactions {
             background: #14141C;
-            border-radius: 25px;
+            border-radius: 20px;
             padding: 1.5rem;
             border: 1px solid #252530;
+            margin-bottom: 1.5rem;
         }
 
         .transactions h3 {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .transaction-item {
@@ -679,6 +677,7 @@
             justify-content: center;
             color: #0066B4;
             transition: all 0.2s;
+            flex-shrink: 0;
         }
 
         .transaction-item:hover .transaction-icon {
@@ -688,15 +687,17 @@
 
         .transaction-details h4 {
             margin-bottom: 0.2rem;
+            font-size: 0.95rem;
         }
 
         .transaction-details p {
             color: #9A9AB0;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
 
         .transaction-amount {
             font-weight: 600;
+            font-size: 0.95rem;
         }
 
         .transaction-amount.positive {
@@ -711,14 +712,14 @@
         .zelle-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin-bottom: 2rem;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .zelle-card {
             background: #14141C;
-            padding: 1.5rem;
-            border-radius: 20px;
+            padding: 1.2rem;
+            border-radius: 15px;
             border: 1px solid #252530;
             text-align: center;
             transition: transform 0.2s ease;
@@ -731,28 +732,30 @@
         }
 
         .zelle-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
             color: #0066B4;
         }
 
         .zelle-card h3 {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
+            font-size: 1rem;
         }
 
         .zelle-card p {
             color: #9A9AB0;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
+            font-size: 0.8rem;
+            margin-bottom: 0.8rem;
         }
 
         .zelle-btn {
             background: #0066B4;
             color: white;
             border: none;
-            padding: 0.8rem 2rem;
-            border-radius: 25px;
+            padding: 0.5rem;
+            border-radius: 20px;
             font-weight: 600;
+            font-size: 0.85rem;
             cursor: pointer;
             width: 100%;
             transition: background 0.2s;
@@ -764,9 +767,15 @@
 
         .contacts {
             background: #14141C;
-            border-radius: 25px;
+            border-radius: 20px;
             padding: 1.5rem;
             border: 1px solid #252530;
+            margin-bottom: 1.5rem;
+        }
+
+        .contacts h3 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
         }
 
         .contact-item {
@@ -791,217 +800,93 @@
         }
 
         .contact-avatar {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             background: #1E1E2A;
-            border-radius: 25px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #0066B4;
             font-weight: 600;
+            flex-shrink: 0;
         }
 
         .contact-info h4 {
             margin-bottom: 0.2rem;
+            font-size: 0.95rem;
         }
 
         .contact-info p {
             color: #9A9AB0;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
 
         /* Transfer Section */
         .transfer-form {
             background: #14141C;
-            border-radius: 25px;
-            padding: 2rem;
+            border-radius: 20px;
+            padding: 1.5rem;
             border: 1px solid #252530;
+            margin-bottom: 1.5rem;
         }
 
         .form-row {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
         }
 
         .form-row label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
             color: #B0B0C0;
+            font-size: 0.9rem;
         }
 
         .form-row select, .form-row input {
             width: 100%;
-            padding: 1rem;
+            padding: 0.8rem;
             background: #0C0C14;
             border: 1px solid #252530;
-            border-radius: 12px;
+            border-radius: 8px;
             color: #FFFFFF;
-            font-size: 1rem;
-            transition: all 0.2s;
-        }
-
-        .form-row select:focus, .form-row input:focus {
-            outline: none;
-            border-color: #0066B4;
+            font-size: 0.95rem;
         }
 
         .radio-group {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .radio-group label {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.3rem;
             color: #FFFFFF;
+            font-size: 0.9rem;
             cursor: pointer;
-        }
-
-        /* Transaction Modal */
-        .tx-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            align-items: center;
-            justify-content: center;
-            z-index: 2000;
-        }
-
-        .tx-modal.active {
-            display: flex;
-        }
-
-        .tx-modal-content {
-            background: #14141C;
-            padding: 2rem;
-            border-radius: 30px;
-            max-width: 400px;
-            width: 90%;
-            border: 1px solid #252530;
-        }
-
-        .tx-modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .tx-modal-header h3 {
-            font-size: 1.3rem;
-        }
-
-        .close-btn {
-            background: transparent;
-            border: none;
-            color: #9A9AB0;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        .tx-detail {
-            display: flex;
-            justify-content: space-between;
-            padding: 1rem 0;
-            border-bottom: 1px solid #252530;
-        }
-
-        .tx-label {
-            color: #9A9AB0;
-        }
-
-        .tx-value {
-            color: #FFFFFF;
-            font-weight: 600;
-        }
-
-        .tx-status {
-            text-align: center;
-            padding: 1rem;
-            background: #1E1E2A;
-            border-radius: 12px;
-            margin: 1.5rem 0;
-            color: #00C48C;
-        }
-
-        /* Send Money Modal */
-        .send-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            align-items: center;
-            justify-content: center;
-            z-index: 2000;
-        }
-
-        .send-modal.active {
-            display: flex;
-        }
-
-        .amount-input {
-            font-size: 2rem;
-            text-align: center;
-            margin: 2rem 0;
-        }
-
-        .amount-input input {
-            font-size: 2rem;
-            width: 200px;
-            text-align: center;
-            background: #0C0C14;
-            border: 1px solid #252530;
-            color: white;
-            padding: 0.5rem;
-            border-radius: 12px;
-        }
-
-        .contact-selector {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-
-        .contact-option {
-            text-align: center;
-            padding: 0.5rem;
-            border-radius: 12px;
-            cursor: pointer;
-        }
-
-        .contact-option.selected {
-            background: #0066B4;
         }
 
         /* Footer */
         .footer {
             text-align: center;
-            padding: 2rem 5%;
+            padding: 1.5rem 3%;
             border-top: 1px solid #1E1E2A;
-            margin-top: 2rem;
+            margin-top: 1rem;
         }
 
         .security-badges {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
 
         .security-badge {
             color: #9A9AB0;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             display: flex;
             align-items: center;
             gap: 0.3rem;
@@ -1024,7 +909,7 @@
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .navbar {
-                padding: 1rem 5%;
+                padding: 0.8rem 3%;
             }
 
             .nav-links {
@@ -1035,10 +920,11 @@
                 flex-direction: column;
                 text-align: center;
                 padding: 2rem 0;
+                gap: 2rem;
             }
 
             .hero-content h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
 
             .stats {
@@ -1049,12 +935,8 @@
                 grid-template-columns: 1fr;
             }
 
-            .auth-card {
-                padding: 2rem;
-            }
-
             .balance-amount {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
 
             .account-info {
@@ -1071,11 +953,12 @@
             }
 
             .quick-actions {
-                justify-content: center;
+                gap: 0.5rem;
             }
 
-            .security-badges {
-                gap: 1rem;
+            .quick-action-btn {
+                padding: 0.6rem 0;
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -1089,15 +972,16 @@
         </div>
         <div class="nav-links">
             <a href="#" onclick="showPage('landing')">Home</a>
-            <a href="#">Wealth Management</a>
-            <a href="#">Investments</a>
-            <a href="#">Private Banking</a>
+            <a href="#">Wealth</a>
+            <a href="#">Invest</a>
+            <a href="#">Private</a>
         </div>
         <div style="display: flex; align-items: center;">
-            <div class="notification-badge">
+            <div class="notification-badge" id="signin-button">
                 <button class="sign-in-btn" onclick="showPage('signin')">Sign In</button>
                 <span class="badge">3</span>
             </div>
+            <!-- NO USER MENU - Sign In button will be hidden after login -->
         </div>
     </nav>
 
@@ -1112,11 +996,11 @@
                     <div class="stats">
                         <div class="stat-item">
                             <h3>$2.3T</h3>
-                            <p>Assets Under Management</p>
+                            <p>Assets</p>
                         </div>
                         <div class="stat-item">
                             <h3>160+</h3>
-                            <p>Countries Worldwide</p>
+                            <p>Countries</p>
                         </div>
                     </div>
                 </div>
@@ -1127,7 +1011,7 @@
                     </div>
                     <div class="card-number">•••• •••• •••• 4842</div>
                     <div class="card-footer">
-                        <span>JOHN D. PRIVATE</span>
+                        <span id="card-name">JOHN PRIVATE</span>
                         <span>12/28</span>
                     </div>
                 </div>
@@ -1137,29 +1021,28 @@
                 <div class="feature-item">
                     <div class="feature-icon">🏦</div>
                     <h3>Private Banking</h3>
-                    <p>Dedicated relationship managers and tailored financial solutions.</p>
+                    <p>Dedicated relationship managers.</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon">📈</div>
                     <h3>Wealth Management</h3>
-                    <p>Sophisticated investment strategies and portfolio management.</p>
+                    <p>Sophisticated investment strategies.</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon">🌎</div>
                     <h3>Global Access</h3>
-                    <p>Seamless banking across 160+ countries worldwide.</p>
+                    <p>Seamless banking worldwide.</p>
                 </div>
             </section>
         </div>
         
-        <!-- Footer -->
         <div class="footer">
             <div class="security-badges">
                 <span class="security-badge">🔒 256-bit Encryption</span>
                 <span class="security-badge">🏦 FDIC Insured</span>
                 <span class="security-badge">✓ Verified Secure</span>
             </div>
-            <div class="copyright">© 2026 Citigroup Inc. All rights reserved.</div>
+            <div class="copyright">© 2026 Citigroup Inc.</div>
         </div>
     </div>
 
@@ -1171,8 +1054,9 @@
                 <p class="auth-subtitle">Sign in to your private banking account</p>
                 
                 <div class="input-group">
-                    <label>Username</label>
-                    <input type="text" id="username" placeholder="Enter your username" value="john.private">
+                    <label>Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your email" value="ifeanyichukwucollins008@gmail.com">
+                    <div id="email-error" class="error-message">Only Gmail, Yahoo, Outlook, or Hotmail emails are allowed</div>
                 </div>
 
                 <div class="input-group">
@@ -1180,40 +1064,39 @@
                     <input type="password" id="password" placeholder="Enter your password" value="********">
                 </div>
 
-                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem;">
-                    <input type="checkbox" id="remember" style="accent-color: #0066B4; width: 18px; height: 18px;">
-                    <label for="remember" style="color: #9A9AB0;">Remember this device</label>
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.2rem;">
+                    <input type="checkbox" id="remember" style="accent-color: #0066B4; width: 16px; height: 16px;">
+                    <label for="remember" style="color: #9A9AB0; font-size: 0.9rem;">Remember device</label>
                 </div>
 
-                <button class="auth-button" onclick="handleSignIn()">Sign In</button>
+                <button class="auth-button" onclick="validateAndSignIn()">Sign In</button>
 
-                <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem;">
-                    <button class="quick-action-btn" style="flex: 1; justify-content: center;" onclick="showTouchID()">
+                <div style="display: flex; gap: 0.8rem; justify-content: center; margin-top: 1.2rem;">
+                    <button class="quick-action-btn" style="flex: 1; justify-content: center; padding: 0.6rem;" onclick="showTouchID()">
                         <span>👆</span> Touch ID
                     </button>
-                    <button class="quick-action-btn" style="flex: 1; justify-content: center;" onclick="showFaceID()">
+                    <button class="quick-action-btn" style="flex: 1; justify-content: center; padding: 0.6rem;" onclick="showFaceID()">
                         <span>👤</span> Face ID
                     </button>
                 </div>
             </div>
         </div>
         
-        <!-- Footer -->
         <div class="footer">
             <div class="security-badges">
                 <span class="security-badge">🔒 256-bit Encryption</span>
                 <span class="security-badge">🏦 FDIC Insured</span>
                 <span class="security-badge">✓ Verified Secure</span>
             </div>
-            <div class="copyright">© 2026 Citigroup Inc. All rights reserved.</div>
+            <div class="copyright">© 2026 Citigroup Inc.</div>
         </div>
     </div>
 
     <!-- OTP Modal -->
     <div id="otp-modal" class="modal">
         <div class="modal-content">
-            <h3>Verify Your Identity</h3>
-            <p style="color: #9A9AB0; margin-bottom: 1.5rem;">Enter the 6-digit code sent to your registered device</p>
+            <h3>Verify Identity</h3>
+            <p style="color: #9A9AB0; margin-bottom: 1.2rem; font-size: 0.9rem;">Enter 6-digit code sent to your device</p>
             
             <div class="otp-inputs">
                 <input type="text" class="otp-input" maxlength="1" pattern="\d*" inputmode="numeric">
@@ -1225,8 +1108,8 @@
             </div>
 
             <div class="checkbox-group">
-                <input type="checkbox" id="verify-check">
-                <label for="verify-check" style="color: #FFFFFF;">Confirm you're not a robot</label>
+                <input type="checkbox" id="verify-check" style="accent-color: #0066B4; width: 18px; height: 18px;">
+                <label for="verify-check" style="color: #FFFFFF; font-size: 0.9rem;">Confirm you're not a robot</label>
             </div>
 
             <button class="auth-button" onclick="verifyOTP()">Verify & Continue</button>
@@ -1234,45 +1117,45 @@
     </div>
 
     <!-- Transaction Detail Modal -->
-    <div id="tx-detail-modal" class="tx-modal">
-        <div class="tx-modal-content">
-            <div class="tx-modal-header">
+    <div id="tx-detail-modal" class="modal" style="z-index: 2000;">
+        <div class="modal-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
                 <h3 id="tx-modal-title">Transaction Details</h3>
-                <button class="close-btn" onclick="closeTxModal()">&times;</button>
+                <button class="close-btn" style="background: none; border: none; color: #9A9AB0; font-size: 1.5rem; cursor: pointer;" onclick="closeTxModal()">&times;</button>
             </div>
             <div id="tx-modal-content">
-                <!-- Dynamic content will be inserted here -->
+                <!-- Dynamic content -->
             </div>
         </div>
     </div>
 
     <!-- Send Money Modal -->
-    <div id="send-money-modal" class="send-modal">
-        <div class="tx-modal-content">
-            <div class="tx-modal-header">
+    <div id="send-money-modal" class="modal" style="z-index: 2000;">
+        <div class="modal-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
                 <h3>Send Money</h3>
-                <button class="close-btn" onclick="closeSendModal()">&times;</button>
+                <button class="close-btn" style="background: none; border: none; color: #9A9AB0; font-size: 1.5rem; cursor: pointer;" onclick="closeSendModal()">&times;</button>
             </div>
-            <div style="text-align: center; margin: 1.5rem 0;">
-                <div class="amount-input">
-                    <input type="text" id="send-amount" value="$100.00">
+            <div style="text-align: center;">
+                <div class="amount-input" style="margin: 1.2rem 0;">
+                    <input type="text" id="send-amount" value="$100.00" style="font-size: 1.8rem; width: 160px; text-align: center; background: #0C0C14; border: 1px solid #252530; color: white; padding: 0.5rem; border-radius: 10px;">
                 </div>
-                <div class="contact-selector" id="contact-selector">
-                    <div class="contact-option selected" onclick="selectContact('jessica', this)">
-                        <div class="contact-avatar" style="margin: 0 auto 0.5rem;">JD</div>
-                        <div>Jessica</div>
+                <div class="contact-selector" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; margin: 1.2rem 0;">
+                    <div class="contact-option selected" style="text-align: center; padding: 0.5rem; border-radius: 10px; cursor: pointer; background: #0066B4;" onclick="selectContact('jessica', this)">
+                        <div class="contact-avatar" style="width: 40px; height: 40px; background: #1E1E2A; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.3rem; color: #0066B4;">JD</div>
+                        <div style="font-size: 0.85rem;">Jessica</div>
                     </div>
-                    <div class="contact-option" onclick="selectContact('michael', this)">
-                        <div class="contact-avatar" style="margin: 0 auto 0.5rem;">MW</div>
-                        <div>Michael</div>
+                    <div class="contact-option" style="text-align: center; padding: 0.5rem; border-radius: 10px; cursor: pointer;" onclick="selectContact('michael', this)">
+                        <div class="contact-avatar" style="width: 40px; height: 40px; background: #1E1E2A; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.3rem; color: #0066B4;">MW</div>
+                        <div style="font-size: 0.85rem;">Michael</div>
                     </div>
-                    <div class="contact-option" onclick="selectContact('sarah', this)">
-                        <div class="contact-avatar" style="margin: 0 auto 0.5rem;">SR</div>
-                        <div>Sarah</div>
+                    <div class="contact-option" style="text-align: center; padding: 0.5rem; border-radius: 10px; cursor: pointer;" onclick="selectContact('sarah', this)">
+                        <div class="contact-avatar" style="width: 40px; height: 40px; background: #1E1E2A; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.3rem; color: #0066B4;">SR</div>
+                        <div style="font-size: 0.85rem;">Sarah</div>
                     </div>
                 </div>
-                <div style="margin: 1.5rem 0;">
-                    <input type="text" placeholder="What's this for?" style="width: 100%; padding: 1rem; background: #0C0C14; border: 1px solid #252530; border-radius: 12px; color: white;">
+                <div style="margin: 1.2rem 0;">
+                    <input type="text" id="send-memo" placeholder="What's this for?" style="width: 100%; padding: 0.9rem; background: #0C0C14; border: 1px solid #252530; border-radius: 10px; color: white;">
                 </div>
                 <button class="auth-button" onclick="processSend()">Send Money</button>
             </div>
@@ -1280,32 +1163,32 @@
     </div>
 
     <!-- Request Money Modal -->
-    <div id="request-money-modal" class="send-modal">
-        <div class="tx-modal-content">
-            <div class="tx-modal-header">
+    <div id="request-money-modal" class="modal" style="z-index: 2000;">
+        <div class="modal-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
                 <h3>Request Money</h3>
-                <button class="close-btn" onclick="closeRequestModal()">&times;</button>
+                <button class="close-btn" style="background: none; border: none; color: #9A9AB0; font-size: 1.5rem; cursor: pointer;" onclick="closeRequestModal()">&times;</button>
             </div>
-            <div style="text-align: center; margin: 1.5rem 0;">
-                <div class="amount-input">
-                    <input type="text" id="request-amount" value="$50.00">
+            <div style="text-align: center;">
+                <div class="amount-input" style="margin: 1.2rem 0;">
+                    <input type="text" id="request-amount" value="$50.00" style="font-size: 1.8rem; width: 160px; text-align: center; background: #0C0C14; border: 1px solid #252530; color: white; padding: 0.5rem; border-radius: 10px;">
                 </div>
-                <div class="contact-selector" id="request-contact-selector">
-                    <div class="contact-option selected" onclick="selectRequestContact('jessica', this)">
-                        <div class="contact-avatar" style="margin: 0 auto 0.5rem;">JD</div>
-                        <div>Jessica</div>
+                <div class="contact-selector" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; margin: 1.2rem 0;">
+                    <div class="contact-option selected" style="text-align: center; padding: 0.5rem; border-radius: 10px; cursor: pointer; background: #0066B4;" onclick="selectRequestContact('jessica', this)">
+                        <div class="contact-avatar" style="width: 40px; height: 40px; background: #1E1E2A; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.3rem; color: #0066B4;">JD</div>
+                        <div style="font-size: 0.85rem;">Jessica</div>
                     </div>
-                    <div class="contact-option" onclick="selectRequestContact('michael', this)">
-                        <div class="contact-avatar" style="margin: 0 auto 0.5rem;">MW</div>
-                        <div>Michael</div>
+                    <div class="contact-option" style="text-align: center; padding: 0.5rem; border-radius: 10px; cursor: pointer;" onclick="selectRequestContact('michael', this)">
+                        <div class="contact-avatar" style="width: 40px; height: 40px; background: #1E1E2A; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.3rem; color: #0066B4;">MW</div>
+                        <div style="font-size: 0.85rem;">Michael</div>
                     </div>
-                    <div class="contact-option" onclick="selectRequestContact('sarah', this)">
-                        <div class="contact-avatar" style="margin: 0 auto 0.5rem;">SR</div>
-                        <div>Sarah</div>
+                    <div class="contact-option" style="text-align: center; padding: 0.5rem; border-radius: 10px; cursor: pointer;" onclick="selectRequestContact('sarah', this)">
+                        <div class="contact-avatar" style="width: 40px; height: 40px; background: #1E1E2A; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.3rem; color: #0066B4;">SR</div>
+                        <div style="font-size: 0.85rem;">Sarah</div>
                     </div>
                 </div>
-                <div style="margin: 1.5rem 0;">
-                    <input type="text" placeholder="What's it for?" style="width: 100%; padding: 1rem; background: #0C0C14; border: 1px solid #252530; border-radius: 12px; color: white;">
+                <div style="margin: 1.2rem 0;">
+                    <input type="text" id="request-memo" placeholder="What's it for?" style="width: 100%; padding: 0.9rem; background: #0C0C14; border: 1px solid #252530; border-radius: 10px; color: white;">
                 </div>
                 <button class="auth-button" onclick="processRequest()">Request Money</button>
             </div>
@@ -1313,37 +1196,37 @@
     </div>
 
     <!-- Statements Modal -->
-    <div id="statements-modal" class="tx-modal">
-        <div class="tx-modal-content">
-            <div class="tx-modal-header">
-                <h3>Account Statements</h3>
-                <button class="close-btn" onclick="closeStatementsModal()">&times;</button>
+    <div id="statements-modal" class="modal" style="z-index: 2000;">
+        <div class="modal-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
+                <h3>Statements</h3>
+                <button class="close-btn" style="background: none; border: none; color: #9A9AB0; font-size: 1.5rem; cursor: pointer;" onclick="closeStatementsModal()">&times;</button>
             </div>
-            <div style="margin: 1rem 0;">
+            <div>
                 <div class="transaction-item" onclick="showStatement('feb2026')">
-                    <div class="transaction-left">
-                        <div class="transaction-icon">📄</div>
-                        <div class="transaction-details">
-                            <h4>February 2026 Statement</h4>
-                            <p>Available now</p>
+                    <div style="display: flex; align-items: center; gap: 0.8rem;">
+                        <div class="transaction-icon" style="width: 36px; height: 36px;">📄</div>
+                        <div>
+                            <h4 style="font-size: 0.95rem;">February 2026 Statement</h4>
+                            <p style="color: #9A9AB0; font-size: 0.8rem;">Available now</p>
                         </div>
                     </div>
                 </div>
                 <div class="transaction-item" onclick="showStatement('jan2026')">
-                    <div class="transaction-left">
-                        <div class="transaction-icon">📄</div>
-                        <div class="transaction-details">
-                            <h4>January 2026 Statement</h4>
-                            <p>PDF • 2.4 MB</p>
+                    <div style="display: flex; align-items: center; gap: 0.8rem;">
+                        <div class="transaction-icon" style="width: 36px; height: 36px;">📄</div>
+                        <div>
+                            <h4 style="font-size: 0.95rem;">January 2026 Statement</h4>
+                            <p style="color: #9A9AB0; font-size: 0.8rem;">PDF • 2.4 MB</p>
                         </div>
                     </div>
                 </div>
                 <div class="transaction-item" onclick="showStatement('dec2025')">
-                    <div class="transaction-left">
-                        <div class="transaction-icon">📄</div>
-                        <div class="transaction-details">
-                            <h4>December 2025 Statement</h4>
-                            <p>PDF • 2.1 MB</p>
+                    <div style="display: flex; align-items: center; gap: 0.8rem;">
+                        <div class="transaction-icon" style="width: 36px; height: 36px;">📄</div>
+                        <div>
+                            <h4 style="font-size: 0.95rem;">December 2025 Statement</h4>
+                            <p style="color: #9A9AB0; font-size: 0.8rem;">PDF • 2.1 MB</p>
                         </div>
                     </div>
                 </div>
@@ -1352,37 +1235,37 @@
     </div>
 
     <!-- Support Modal -->
-    <div id="support-modal" class="tx-modal">
-        <div class="tx-modal-content">
-            <div class="tx-modal-header">
-                <h3>Customer Support</h3>
-                <button class="close-btn" onclick="closeSupportModal()">&times;</button>
+    <div id="support-modal" class="modal" style="z-index: 2000;">
+        <div class="modal-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
+                <h3>Support</h3>
+                <button class="close-btn" style="background: none; border: none; color: #9A9AB0; font-size: 1.5rem; cursor: pointer;" onclick="closeSupportModal()">&times;</button>
             </div>
-            <div style="margin: 1rem 0;">
+            <div>
                 <div class="transaction-item" onclick="callSupport()">
-                    <div class="transaction-left">
-                        <div class="transaction-icon">📞</div>
-                        <div class="transaction-details">
-                            <h4>Call Private Banking</h4>
-                            <p>1-800-123-4567</p>
+                    <div style="display: flex; align-items: center; gap: 0.8rem;">
+                        <div class="transaction-icon" style="width: 36px; height: 36px;">📞</div>
+                        <div>
+                            <h4 style="font-size: 0.95rem;">Call Private Banking</h4>
+                            <p style="color: #9A9AB0; font-size: 0.8rem;">1-800-123-4567</p>
                         </div>
                     </div>
                 </div>
                 <div class="transaction-item" onclick="chatSupport()">
-                    <div class="transaction-left">
-                        <div class="transaction-icon">💬</div>
-                        <div class="transaction-details">
-                            <h4>Secure Message</h4>
-                            <p>Send a message</p>
+                    <div style="display: flex; align-items: center; gap: 0.8rem;">
+                        <div class="transaction-icon" style="width: 36px; height: 36px;">💬</div>
+                        <div>
+                            <h4 style="font-size: 0.95rem;">Secure Message</h4>
+                            <p style="color: #9A9AB0; font-size: 0.8rem;">Send a message</p>
                         </div>
                     </div>
                 </div>
                 <div class="transaction-item" onclick="scheduleCall()">
-                    <div class="transaction-left">
-                        <div class="transaction-icon">📅</div>
-                        <div class="transaction-details">
-                            <h4>Schedule a Call</h4>
-                            <p>We'll call you</p>
+                    <div style="display: flex; align-items: center; gap: 0.8rem;">
+                        <div class="transaction-icon" style="width: 36px; height: 36px;">📅</div>
+                        <div>
+                            <h4 style="font-size: 0.95rem;">Schedule a Call</h4>
+                            <p style="color: #9A9AB0; font-size: 0.8rem;">We'll call you</p>
                         </div>
                     </div>
                 </div>
@@ -1395,33 +1278,17 @@
         <div class="dashboard">
             <div class="dashboard-header">
                 <div class="welcome">
-                    <h1>Good evening, John</h1>
+                    <h1>Good evening, <span id="user-first-name">Ifeanyichukwu</span></h1>
                     <p>Private Banking • Member since 2018</p>
                 </div>
-                <button class="sign-in-btn" onclick="showPage('landing')">Sign Out</button>
-            </div>
-
-            <!-- Quick Actions - ALL WORKING NOW -->
-            <div class="quick-actions">
-                <button class="quick-action-btn primary" onclick="showSendMoney()">
-                    <span>⬆️</span> Send
-                </button>
-                <button class="quick-action-btn" onclick="showRequestMoney()">
-                    <span>⬇️</span> Request
-                </button>
-                <button class="quick-action-btn" onclick="showStatements()">
-                    <span>📊</span> Statements
-                </button>
-                <button class="quick-action-btn" onclick="showSupport()">
-                    <span>📞</span> Support
-                </button>
+                <!-- NO USER MENU - COMPLETELY REMOVED -->
             </div>
 
             <!-- Dashboard Tabs -->
             <div class="dashboard-tabs">
                 <button class="tab-btn active" onclick="switchTab('accounts', this)">Accounts</button>
                 <button class="tab-btn" onclick="switchTab('zelle', this)">Zelle</button>
-                <button class="tab-btn" onclick="switchTab('transfer', this)">Transfer & Request</button>
+                <button class="tab-btn" onclick="switchTab('transfer', this)">Transfer</button>
             </div>
 
             <!-- Accounts Tab -->
@@ -1490,32 +1357,10 @@
                         </div>
                         <div class="transaction-amount negative">-$12,899.99</div>
                     </div>
-
-                    <div class="transaction-item" onclick="showTransactionDetail('interest')">
-                        <div class="transaction-left">
-                            <div class="transaction-icon">💰</div>
-                            <div class="transaction-details">
-                                <h4>Interest Payment</h4>
-                                <p>Feb 12, 2026 • High-Yield Savings</p>
-                            </div>
-                        </div>
-                        <div class="transaction-amount positive">+$1,234.56</div>
-                    </div>
-
-                    <div class="transaction-item" onclick="showTransactionDetail('equity')">
-                        <div class="transaction-left">
-                            <div class="transaction-icon">💼</div>
-                            <div class="transaction-details">
-                                <h4>Private Equity Distribution</h4>
-                                <p>Feb 10, 2026 • Blackstone Fund</p>
-                            </div>
-                        </div>
-                        <div class="transaction-amount positive">+$75,000.00</div>
-                    </div>
                 </div>
             </div>
 
-            <!-- Zelle Tab - ALL WORKING NOW -->
+            <!-- Zelle Tab -->
             <div id="zelle-tab" class="tab-content">
                 <div class="zelle-grid">
                     <div class="zelle-card" onclick="showSendMoney()">
@@ -1550,97 +1395,19 @@
                             <p>michael.w@email.com • Zelle</p>
                         </div>
                     </div>
-
-                    <div class="contact-item" onclick="showSendToContact('Sarah Roberts')">
-                        <div class="contact-avatar">SR</div>
-                        <div class="contact-info">
-                            <h4>Sarah Roberts</h4>
-                            <p>sarah.roberts@email.com • Zelle</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item" onclick="showSendToContact('Thomas Kim')">
-                        <div class="contact-avatar">TK</div>
-                        <div class="contact-info">
-                            <h4>Thomas Kim</h4>
-                            <p>thomas.k@email.com • Zelle</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="margin-top: 2rem;">
-                    <div class="transactions">
-                        <h3>Recent Zelle Transactions</h3>
-                        
-                        <div class="transaction-item" onclick="showZelleTransaction('sent-jessica')">
-                            <div class="transaction-left">
-                                <div class="transaction-icon">⚡</div>
-                                <div class="transaction-details">
-                                    <h4>Sent to Jessica Davis</h4>
-                                    <p>Today at 2:30 PM • Zelle</p>
-                                </div>
-                            </div>
-                            <div class="transaction-amount negative">-$250.00</div>
-                        </div>
-
-                        <div class="transaction-item" onclick="showZelleTransaction('received-michael')">
-                            <div class="transaction-left">
-                                <div class="transaction-icon">⚡</div>
-                                <div class="transaction-details">
-                                    <h4>Received from Michael Wong</h4>
-                                    <p>Yesterday at 6:15 PM • Zelle</p>
-                                </div>
-                            </div>
-                            <div class="transaction-amount positive">+$75.50</div>
-                        </div>
-
-                        <div class="transaction-item" onclick="showZelleTransaction('sent-sarah')">
-                            <div class="transaction-left">
-                                <div class="transaction-icon">⚡</div>
-                                <div class="transaction-details">
-                                    <h4>Sent to Sarah Roberts</h4>
-                                    <p>Feb 14, 2026 • Zelle</p>
-                                </div>
-                            </div>
-                            <div class="transaction-amount negative">-$125.00</div>
-                        </div>
-
-                        <div class="transaction-item" onclick="showZelleTransaction('received-thomas')">
-                            <div class="transaction-left">
-                                <div class="transaction-icon">⚡</div>
-                                <div class="transaction-details">
-                                    <h4>Received from Thomas Kim</h4>
-                                    <p>Feb 12, 2026 • Zelle</p>
-                                </div>
-                            </div>
-                            <div class="transaction-amount positive">+$350.00</div>
-                        </div>
-
-                        <div class="transaction-item" onclick="showZelleTransaction('sent-dinner')">
-                            <div class="transaction-left">
-                                <div class="transaction-icon">⚡</div>
-                                <div class="transaction-details">
-                                    <h4>Sent to Emily Chen</h4>
-                                    <p>Feb 10, 2026 • Zelle</p>
-                                </div>
-                            </div>
-                            <div class="transaction-amount negative">-$65.50</div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
-            <!-- Transfer & Request Tab - ALL WORKING NOW -->
+            <!-- Transfer Tab -->
             <div id="transfer-tab" class="tab-content">
                 <div class="transfer-form">
-                    <h3 style="margin-bottom: 1.5rem;">Transfer Money</h3>
+                    <h3 style="margin-bottom: 1.2rem;">Transfer Money</h3>
                     
                     <div class="form-row">
                         <label>From Account</label>
                         <select id="from-account">
                             <option>Private Checking (•••• 4582) - $1,248,394.62</option>
                             <option>Private Savings (•••• 7890) - $450,000.00</option>
-                            <option>Investment Account (•••• 1234) - $2,100,000.00</option>
                         </select>
                     </div>
 
@@ -1650,7 +1417,6 @@
                             <option>Private Savings (•••• 7890)</option>
                             <option>Michael Wong • Zelle</option>
                             <option>Jessica Davis • Zelle</option>
-                            <option>Add External Account</option>
                         </select>
                     </div>
 
@@ -1659,100 +1425,131 @@
                         <input type="text" id="transfer-amount" value="$1,000.00">
                     </div>
 
-                    <div class="form-row">
-                        <label>Transfer Type</label>
-                        <div class="radio-group">
-                            <label>
-                                <input type="radio" name="transfer-type" value="now" checked> Now
-                            </label>
-                            <label>
-                                <input type="radio" name="transfer-type" value="scheduled"> Scheduled
-                            </label>
-                            <label>
-                                <input type="radio" name="transfer-type" value="recurring"> Recurring
-                            </label>
-                        </div>
-                    </div>
-
-                    <button class="auth-button" style="margin-top: 1rem;" onclick="processTransfer()">Review Transfer</button>
+                    <button class="auth-button" style="margin-top: 0.5rem;" onclick="processTransfer()">Review Transfer</button>
                 </div>
 
-                <div style="margin-top: 2rem;">
-                    <div class="transactions">
-                        <h3>Recent Transfers</h3>
-                        
-                        <div class="transaction-item" onclick="showTransferDetail('to-jessica')">
-                            <div class="transaction-left">
-                                <div class="transaction-icon">↗️</div>
-                                <div class="transaction-details">
-                                    <h4>To Jessica Davis</h4>
-                                    <p>Feb 14, 2026 • Zelle</p>
-                                </div>
+                <div class="transactions">
+                    <h3>Recent Transfers</h3>
+                    
+                    <div class="transaction-item" onclick="showTransferDetail('to-jessica')">
+                        <div class="transaction-left">
+                            <div class="transaction-icon">↗️</div>
+                            <div class="transaction-details">
+                                <h4>To Jessica Davis</h4>
+                                <p>Feb 14, 2026 • Zelle</p>
                             </div>
-                            <div class="transaction-amount negative">-$250.00</div>
                         </div>
+                        <div class="transaction-amount negative">-$250.00</div>
+                    </div>
 
-                        <div class="transaction-item" onclick="showTransferDetail('from-michael')">
-                            <div class="transaction-left">
-                                <div class="transaction-icon">↘️</div>
-                                <div class="transaction-details">
-                                    <h4>From Michael Wong</h4>
-                                    <p>Feb 12, 2026 • Zelle</p>
-                                </div>
+                    <div class="transaction-item" onclick="showTransferDetail('from-michael')">
+                        <div class="transaction-left">
+                            <div class="transaction-icon">↘️</div>
+                            <div class="transaction-details">
+                                <h4>From Michael Wong</h4>
+                                <p>Feb 12, 2026 • Zelle</p>
                             </div>
-                            <div class="transaction-amount positive">+$75.50</div>
                         </div>
-
-                        <div class="transaction-item" onclick="showTransferDetail('to-savings')">
-                            <div class="transaction-left">
-                                <div class="transaction-icon">🏦</div>
-                                <div class="transaction-details">
-                                    <h4>To Savings Account</h4>
-                                    <p>Feb 10, 2026 • Internal Transfer</p>
-                                </div>
-                            </div>
-                            <div class="transaction-amount negative">-$5,000.00</div>
-                        </div>
-
-                        <div class="transaction-item" onclick="showTransferDetail('to-investment')">
-                            <div class="transaction-left">
-                                <div class="transaction-icon">📈</div>
-                                <div class="transaction-details">
-                                    <h4>To Investment Account</h4>
-                                    <p>Feb 5, 2026 • Internal Transfer</p>
-                                </div>
-                            </div>
-                            <div class="transaction-amount negative">-$25,000.00</div>
-                        </div>
-
-                        <div class="transaction-item" onclick="showTransferDetail('from-sarah')">
-                            <div class="transaction-left">
-                                <div class="transaction-icon">↘️</div>
-                                <div class="transaction-details">
-                                    <h4>From Sarah Roberts</h4>
-                                    <p>Feb 3, 2026 • Zelle</p>
-                                </div>
-                            </div>
-                            <div class="transaction-amount positive">+$125.00</div>
-                        </div>
+                        <div class="transaction-amount positive">+$75.50</div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- Footer -->
+        <!-- Quick Actions - FIXED AT BOTTOM -->
+        <div class="quick-actions-container">
+            <div class="quick-actions">
+                <button class="quick-action-btn primary" onclick="showSendMoney()">
+                    <span>⬆️</span> Send
+                </button>
+                <button class="quick-action-btn" onclick="showRequestMoney()">
+                    <span>⬇️</span> Request
+                </button>
+                <button class="quick-action-btn" onclick="showStatements()">
+                    <span>📊</span> Statements
+                </button>
+                <button class="quick-action-btn" onclick="showSupport()">
+                    <span>📞</span> Support
+                </button>
+            </div>
+        </div>
+
         <div class="footer">
             <div class="security-badges">
-                <span class="security-badge">🔒 256-bit Encryption</span>
-                <span class="security-badge">🏦 FDIC Insured</span>
-                <span class="security-badge">✓ Verified Secure</span>
+                <span class="security-badge">🔒 256-bit</span>
+                <span class="security-badge">🏦 FDIC</span>
+                <span class="security-badge">✓ Verified</span>
             </div>
-            <div class="copyright">© 2026 Citigroup Inc. All rights reserved.</div>
+            <div class="copyright">© 2026 Citigroup Inc.</div>
         </div>
     </div>
 
     <script>
-        // Page navigation
+        let currentUser = {
+            email: 'ifeanyichukwucollins008@gmail.com',
+            name: 'Ifeanyichukwu Collins',
+            firstName: 'Ifeanyichukwu'
+        };
+
+        // Email validation
+        function isValidEmail(email) {
+            const allowedDomains = ['gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com'];
+            const domain = email.split('@')[1]?.toLowerCase();
+            return domain && allowedDomains.includes(domain);
+        }
+
+        // Parse email to name
+        function parseEmailToName(email) {
+            if (!email || !email.includes('@')) return { name: 'User', firstName: 'User' };
+            
+            const localPart = email.split('@')[0];
+            let firstName = localPart;
+            
+            if (localPart.includes('.')) {
+                const parts = localPart.split('.');
+                firstName = parts[0].charAt(0).toUpperCase() + parts[0].slice(1);
+            } else {
+                const match = localPart.match(/^([a-zA-Z]+)(\d+)$/);
+                if (match) {
+                    firstName = match[1].charAt(0).toUpperCase() + match[1].slice(1);
+                } else {
+                    firstName = localPart.charAt(0).toUpperCase() + localPart.slice(1);
+                }
+            }
+            
+            return { name: firstName, firstName: firstName };
+        }
+
+        function validateAndSignIn() {
+            const email = document.getElementById('login-email').value.trim();
+            const errorEl = document.getElementById('email-error');
+            
+            if (!isValidEmail(email)) {
+                errorEl.classList.add('show');
+                return;
+            }
+            
+            errorEl.classList.remove('show');
+            
+            const userData = parseEmailToName(email);
+            
+            currentUser = {
+                email: email,
+                name: userData.name,
+                firstName: userData.firstName
+            };
+            
+            // Hide Sign In button
+            document.getElementById('signin-button').style.display = 'none';
+            
+            // Update welcome message
+            document.getElementById('user-first-name').textContent = currentUser.firstName;
+            document.getElementById('card-name').textContent = currentUser.name.toUpperCase();
+            
+            document.getElementById('signin-page').classList.remove('active');
+            document.getElementById('otp-modal').classList.add('active');
+        }
+
         function showPage(pageId) {
             document.getElementById('landing-page').classList.remove('active');
             document.getElementById('signin-page').classList.remove('active');
@@ -1760,61 +1557,40 @@
             
             if (pageId === 'landing') {
                 document.getElementById('landing-page').classList.add('active');
+                document.getElementById('signin-button').style.display = 'inline-block';
             } else if (pageId === 'signin') {
                 document.getElementById('signin-page').classList.add('active');
+                document.getElementById('signin-button').style.display = 'inline-block';
             } else if (pageId === 'dashboard') {
                 document.getElementById('dashboard-page').classList.add('active');
+                // Sign In button already hidden from validateAndSignIn
             }
         }
 
-        // Tab switching with loading effect
         function switchTab(tabName, element) {
-            // Show loading effect
-            const activeContent = document.querySelector('.tab-content.active');
-            if (activeContent) {
-                activeContent.style.opacity = '0.3';
-            }
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
             
-            setTimeout(() => {
-                // Update tab buttons
-                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-                element.classList.add('active');
-                
-                // Update tab content
-                document.getElementById('accounts-tab').classList.remove('active');
-                document.getElementById('zelle-tab').classList.remove('active');
-                document.getElementById('transfer-tab').classList.remove('active');
-                
-                if (tabName === 'accounts') {
-                    document.getElementById('accounts-tab').classList.add('active');
-                } else if (tabName === 'zelle') {
-                    document.getElementById('zelle-tab').classList.add('active');
-                } else if (tabName === 'transfer') {
-                    document.getElementById('transfer-tab').classList.add('active');
-                }
-                
-                // Restore opacity
-                const newActive = document.querySelector('.tab-content.active');
-                if (newActive) {
-                    newActive.style.opacity = '1';
-                }
-            }, 300);
+            document.getElementById('accounts-tab').classList.remove('active');
+            document.getElementById('zelle-tab').classList.remove('active');
+            document.getElementById('transfer-tab').classList.remove('active');
+            
+            if (tabName === 'accounts') {
+                document.getElementById('accounts-tab').classList.add('active');
+            } else if (tabName === 'zelle') {
+                document.getElementById('zelle-tab').classList.add('active');
+            } else if (tabName === 'transfer') {
+                document.getElementById('transfer-tab').classList.add('active');
+            }
         }
 
-        // Handle sign in
-        function handleSignIn() {
-            document.getElementById('signin-page').classList.remove('active');
-            document.getElementById('otp-modal').classList.add('active');
-        }
-
-        // OTP input handling
+        // OTP handling
         document.querySelectorAll('.otp-input').forEach((input, index, inputs) => {
             input.addEventListener('input', (e) => {
                 if (e.target.value.length === 1 && index < inputs.length - 1) {
                     inputs[index + 1].focus();
                 }
             });
-
             input.addEventListener('keydown', (e) => {
                 if (e.key === 'Backspace' && index > 0 && e.target.value.length === 0) {
                     inputs[index - 1].focus();
@@ -1822,595 +1598,131 @@
             });
         });
 
-        // Verify OTP
         function verifyOTP() {
-            const isChecked = document.getElementById('verify-check').checked;
-            
-            if (!isChecked) {
+            if (!document.getElementById('verify-check').checked) {
                 alert('Please confirm you\'re not a robot');
                 return;
             }
-
             document.getElementById('otp-modal').classList.remove('active');
             document.getElementById('dashboard-page').classList.add('active');
         }
 
-        // Close modal if clicked outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('otp-modal');
-            if (event.target === modal) {
-                modal.classList.remove('active');
-                showPage('signin');
-            }
-            
-            const txModal = document.getElementById('tx-detail-modal');
-            if (event.target === txModal) {
-                closeTxModal();
-            }
-            
-            const sendModal = document.getElementById('send-money-modal');
-            if (event.target === sendModal) {
-                closeSendModal();
-            }
-            
-            const requestModal = document.getElementById('request-money-modal');
-            if (event.target === requestModal) {
-                closeRequestModal();
-            }
-            
-            const statementsModal = document.getElementById('statements-modal');
-            if (event.target === statementsModal) {
-                closeStatementsModal();
-            }
-            
-            const supportModal = document.getElementById('support-modal');
-            if (event.target === supportModal) {
-                closeSupportModal();
-            }
-        }
+        // Modal functions
+        function closeTxModal() { document.getElementById('tx-detail-modal').classList.remove('active'); }
+        function closeSendModal() { document.getElementById('send-money-modal').classList.remove('active'); }
+        function closeRequestModal() { document.getElementById('request-money-modal').classList.remove('active'); }
+        function closeStatementsModal() { document.getElementById('statements-modal').classList.remove('active'); }
+        function closeSupportModal() { document.getElementById('support-modal').classList.remove('active'); }
 
-        // Transaction Detail Modal
-        function showTransactionDetail(type) {
-            const modal = document.getElementById('tx-detail-modal');
-            const content = document.getElementById('tx-modal-content');
-            const title = document.getElementById('tx-modal-title');
-            
-            let html = '';
-            
-            if (type === 'wire-transfer') {
-                title.textContent = 'Wire Transfer Details';
-                html = `
-                    <div class="tx-detail">
-                        <span class="tx-label">Transaction ID:</span>
-                        <span class="tx-value">WT-2026-0215-4842</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Date:</span>
-                        <span class="tx-value">February 15, 2026</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Amount:</span>
-                        <span class="tx-value" style="color: #FF5C5C;">-$42,500.00</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">From:</span>
-                        <span class="tx-value">Private Checking •••• 4582</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">To:</span>
-                        <span class="tx-value">Barclays London • GB52BARC2040</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Reference:</span>
-                        <span class="tx-value">Property Investment</span>
-                    </div>
-                    <div class="tx-status">
-                        ✅ Completed
-                    </div>
-                `;
-            } else if (type === 'dividend') {
-                title.textContent = 'Dividend Payment Details';
-                html = `
-                    <div class="tx-detail">
-                        <span class="tx-label">Transaction ID:</span>
-                        <span class="tx-value">DIV-2026-0214-7890</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Date:</span>
-                        <span class="tx-value">February 14, 2026</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Amount:</span>
-                        <span class="tx-value" style="color: #00C48C;">+$3,250.75</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Security:</span>
-                        <span class="tx-value">Apple Inc. (AAPL)</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Shares:</span>
-                        <span class="tx-value">1,250 shares</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Dividend Rate:</span>
-                        <span class="tx-value">$2.60 per share</span>
-                    </div>
-                    <div class="tx-status">
-                        ✅ Posted
-                    </div>
-                `;
-            } else if (type === 'purchase') {
-                title.textContent = 'Card Purchase Details';
-                html = `
-                    <div class="tx-detail">
-                        <span class="tx-label">Transaction ID:</span>
-                        <span class="tx-value">CARD-2026-0213-1234</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Date:</span>
-                        <span class="tx-value">February 13, 2026</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Amount:</span>
-                        <span class="tx-value" style="color: #FF5C5C;">-$12,899.99</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Merchant:</span>
-                        <span class="tx-value">Harrods London</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Card:</span>
-                        <span class="tx-value">Private Select •••• 4842</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Category:</span>
-                        <span class="tx-value">Luxury Goods</span>
-                    </div>
-                    <div class="tx-status">
-                        ✅ Posted
-                    </div>
-                `;
-            } else if (type === 'interest') {
-                title.textContent = 'Interest Payment Details';
-                html = `
-                    <div class="tx-detail">
-                        <span class="tx-label">Transaction ID:</span>
-                        <span class="tx-value">INT-2026-0212-5678</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Date:</span>
-                        <span class="tx-value">February 12, 2026</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Amount:</span>
-                        <span class="tx-value" style="color: #00C48C;">+$1,234.56</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Account:</span>
-                        <span class="tx-value">High-Yield Savings •••• 7890</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Interest Rate:</span>
-                        <span class="tx-value">4.25% APY</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Period:</span>
-                        <span class="tx-value">January 2026</span>
-                    </div>
-                    <div class="tx-status">
-                        ✅ Credited
-                    </div>
-                `;
-            } else if (type === 'equity') {
-                title.textContent = 'Private Equity Distribution';
-                html = `
-                    <div class="tx-detail">
-                        <span class="tx-label">Transaction ID:</span>
-                        <span class="tx-value">PE-2026-0210-9012</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Date:</span>
-                        <span class="tx-value">February 10, 2026</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Amount:</span>
-                        <span class="tx-value" style="color: #00C48C;">+$75,000.00</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Fund:</span>
-                        <span class="tx-value">Blackstone Capital Partners</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Distribution Type:</span>
-                        <span class="tx-value">Quarterly Distribution</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Account:</span>
-                        <span class="tx-value">Investment Account •••• 1234</span>
-                    </div>
-                    <div class="tx-status">
-                        ✅ Distributed
-                    </div>
-                `;
-            }
-            
-            content.innerHTML = html;
-            modal.classList.add('active');
-        }
-
-        function closeTxModal() {
-            document.getElementById('tx-detail-modal').classList.remove('active');
-        }
-
-        // Send Money Functions
-        function showSendMoney() {
-            document.getElementById('send-money-modal').classList.add('active');
-        }
-
-        function closeSendModal() {
-            document.getElementById('send-money-modal').classList.remove('active');
-        }
+        function showSendMoney() { document.getElementById('send-money-modal').classList.add('active'); }
+        function showRequestMoney() { document.getElementById('request-money-modal').classList.add('active'); }
+        function showStatements() { document.getElementById('statements-modal').classList.add('active'); }
+        function showSupport() { document.getElementById('support-modal').classList.add('active'); }
+        function showSendToContact(name) { showSendMoney(); }
+        function showTouchID() { alert('Touch ID verified successfully'); }
+        function showFaceID() { alert('Face ID verified successfully'); }
 
         function selectContact(contact, element) {
-            document.querySelectorAll('#contact-selector .contact-option').forEach(opt => {
-                opt.classList.remove('selected');
-            });
-            element.classList.add('selected');
+            document.querySelectorAll('#send-money-modal .contact-option').forEach(opt => opt.style.background = 'none');
+            element.style.background = '#0066B4';
+        }
+
+        function selectRequestContact(contact, element) {
+            document.querySelectorAll('#request-money-modal .contact-option').forEach(opt => opt.style.background = 'none');
+            element.style.background = '#0066B4';
         }
 
         function processSend() {
             const amount = document.getElementById('send-amount').value;
-            const selectedContact = document.querySelector('#contact-selector .selected div:last-child').textContent;
+            const memo = document.getElementById('send-memo').value;
+            const selected = document.querySelector('#send-money-modal .contact-option[style*="background: rgb(0, 102, 180)"] div:last-child');
+            const contact = selected ? selected.textContent : 'Jessica';
             closeSendModal();
-            setTimeout(() => {
-                showSuccessModal(`$${amount} sent to ${selectedContact}`);
-            }, 300);
-        }
-
-        // Request Money Functions
-        function showRequestMoney() {
-            document.getElementById('request-money-modal').classList.add('active');
-        }
-
-        function closeRequestModal() {
-            document.getElementById('request-money-modal').classList.remove('active');
-        }
-
-        function selectRequestContact(contact, element) {
-            document.querySelectorAll('#request-contact-selector .contact-option').forEach(opt => {
-                opt.classList.remove('selected');
-            });
-            element.classList.add('selected');
+            setTimeout(() => alert(`Sent ${amount} to ${contact}${memo ? ' for ' + memo : ''}`), 300);
         }
 
         function processRequest() {
             const amount = document.getElementById('request-amount').value;
-            const selectedContact = document.querySelector('#request-contact-selector .selected div:last-child').textContent;
+            const memo = document.getElementById('request-memo').value;
             closeRequestModal();
-            setTimeout(() => {
-                showSuccessModal(`Requested ${amount} from ${selectedContact}`);
-            }, 300);
-        }
-
-        // Statements Functions
-        function showStatements() {
-            document.getElementById('statements-modal').classList.add('active');
-        }
-
-        function closeStatementsModal() {
-            document.getElementById('statements-modal').classList.remove('active');
+            setTimeout(() => alert(`Requested ${amount}${memo ? ' for ' + memo : ''}`), 300);
         }
 
         function showStatement(month) {
             closeStatementsModal();
-            const months = {
-                'feb2026': 'February 2026',
-                'jan2026': 'January 2026',
-                'dec2025': 'December 2025'
-            };
-            setTimeout(() => {
-                showSuccessModal(`Opening ${months[month]} Statement...`);
-            }, 300);
-        }
-
-        // Support Functions
-        function showSupport() {
-            document.getElementById('support-modal').classList.add('active');
-        }
-
-        function closeSupportModal() {
-            document.getElementById('support-modal').classList.remove('active');
+            const months = { 'feb2026': 'February 2026', 'jan2026': 'January 2026', 'dec2025': 'December 2025' };
+            setTimeout(() => alert(`Opening ${months[month]} Statement...`), 300);
         }
 
         function callSupport() {
             closeSupportModal();
-            setTimeout(() => {
-                showSuccessModal('Calling Private Banking...\n1-800-123-4567');
-            }, 300);
+            setTimeout(() => alert('Calling Private Banking...\n1-800-123-4567'), 300);
         }
 
         function chatSupport() {
             closeSupportModal();
-            setTimeout(() => {
-                showSuccessModal('Opening secure messaging...');
-            }, 300);
+            setTimeout(() => alert('Opening secure messaging...'), 300);
         }
 
         function scheduleCall() {
             closeSupportModal();
-            setTimeout(() => {
-                showSuccessModal('Schedule a call: Select a time...');
-            }, 300);
-        }
-
-        // Touch ID / Face ID
-        function showTouchID() {
-            showSuccessModal('Touch ID verified successfully');
-        }
-
-        function showFaceID() {
-            showSuccessModal('Face ID verified successfully');
-        }
-
-        // Send to contact from Zelle
-        function showSendToContact(name) {
-            showSendMoney();
-        }
-
-        // Zelle Transaction Details
-        function showZelleTransaction(type) {
-            const modal = document.getElementById('tx-detail-modal');
-            const content = document.getElementById('tx-modal-content');
-            const title = document.getElementById('tx-modal-title');
-            
-            let html = '';
-            
-            if (type === 'sent-jessica') {
-                title.textContent = 'Zelle Payment Details';
-                html = `
-                    <div class="tx-detail">
-                        <span class="tx-label">Reference ID:</span>
-                        <span class="tx-value">ZELLE-20260215-001</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Date:</span>
-                        <span class="tx-value">Today at 2:30 PM</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Amount:</span>
-                        <span class="tx-value" style="color: #FF5C5C;">-$250.00</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">To:</span>
-                        <span class="tx-value">Jessica Davis</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Email:</span>
-                        <span class="tx-value">jessica.davis@email.com</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Memo:</span>
-                        <span class="tx-value">Dinner</span>
-                    </div>
-                    <div class="tx-status">
-                        ✅ Completed
-                    </div>
-                `;
-            } else if (type === 'received-michael') {
-                title.textContent = 'Zelle Payment Details';
-                html = `
-                    <div class="tx-detail">
-                        <span class="tx-label">Reference ID:</span>
-                        <span class="tx-value">ZELLE-20260214-089</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Date:</span>
-                        <span class="tx-value">Yesterday at 6:15 PM</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Amount:</span>
-                        <span class="tx-value" style="color: #00C48C;">+$75.50</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">From:</span>
-                        <span class="tx-value">Michael Wong</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Email:</span>
-                        <span class="tx-value">michael.w@email.com</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Memo:</span>
-                        <span class="tx-value">Uber</span>
-                    </div>
-                    <div class="tx-status">
-                        ✅ Received
-                    </div>
-                `;
-            } else {
-                title.textContent = 'Zelle Transaction';
-                html = `
-                    <div class="tx-detail">
-                        <span class="tx-label">Reference ID:</span>
-                        <span class="tx-value">ZELLE-202602${Math.floor(Math.random()*100)}</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Date:</span>
-                        <span class="tx-value">February ${Math.floor(Math.random()*14)+1}, 2026</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Amount:</span>
-                        <span class="tx-value">$${(Math.random()*500).toFixed(2)}</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Status:</span>
-                        <span class="tx-value">Completed</span>
-                    </div>
-                    <div class="tx-status">
-                        ✅ Verified
-                    </div>
-                `;
-            }
-            
-            content.innerHTML = html;
-            modal.classList.add('active');
-        }
-
-        // Transfer functions
-        function showTransferDetail(type) {
-            const modal = document.getElementById('tx-detail-modal');
-            const content = document.getElementById('tx-modal-content');
-            const title = document.getElementById('tx-modal-title');
-            
-            let html = '';
-            
-            if (type === 'to-jessica') {
-                title.textContent = 'Transfer Details';
-                html = `
-                    <div class="tx-detail">
-                        <span class="tx-label">Transfer ID:</span>
-                        <span class="tx-value">TRF-20260214-442</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Date:</span>
-                        <span class="tx-value">February 14, 2026</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Amount:</span>
-                        <span class="tx-value" style="color: #FF5C5C;">-$250.00</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">From:</span>
-                        <span class="tx-value">Private Checking •••• 4582</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">To:</span>
-                        <span class="tx-value">Jessica Davis (Zelle)</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Type:</span>
-                        <span class="tx-value">Instant Transfer</span>
-                    </div>
-                    <div class="tx-status">
-                        ✅ Completed
-                    </div>
-                `;
-            } else if (type === 'from-michael') {
-                title.textContent = 'Transfer Details';
-                html = `
-                    <div class="tx-detail">
-                        <span class="tx-label">Transfer ID:</span>
-                        <span class="tx-value">TRF-20260212-789</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Date:</span>
-                        <span class="tx-value">February 12, 2026</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Amount:</span>
-                        <span class="tx-value" style="color: #00C48C;">+$75.50</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">From:</span>
-                        <span class="tx-value">Michael Wong (Zelle)</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">To:</span>
-                        <span class="tx-value">Private Checking •••• 4582</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Type:</span>
-                        <span class="tx-value">Instant Transfer</span>
-                    </div>
-                    <div class="tx-status">
-                        ✅ Completed
-                    </div>
-                `;
-            } else if (type === 'to-savings') {
-                title.textContent = 'Internal Transfer';
-                html = `
-                    <div class="tx-detail">
-                        <span class="tx-label">Transfer ID:</span>
-                        <span class="tx-value">INT-20260210-123</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Date:</span>
-                        <span class="tx-value">February 10, 2026</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Amount:</span>
-                        <span class="tx-value" style="color: #FF5C5C;">-$5,000.00</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">From:</span>
-                        <span class="tx-value">Private Checking •••• 4582</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">To:</span>
-                        <span class="tx-value">Private Savings •••• 7890</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Type:</span>
-                        <span class="tx-value">Instant Transfer</span>
-                    </div>
-                    <div class="tx-status">
-                        ✅ Completed
-                    </div>
-                `;
-            } else {
-                title.textContent = 'Transfer Details';
-                html = `
-                    <div class="tx-detail">
-                        <span class="tx-label">Transfer ID:</span>
-                        <span class="tx-value">TRF-202602${Math.floor(Math.random()*100)}</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Date:</span>
-                        <span class="tx-value">February ${Math.floor(Math.random()*10)+1}, 2026</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Amount:</span>
-                        <span class="tx-value">$${(Math.random()*1000).toFixed(2)}</span>
-                    </div>
-                    <div class="tx-detail">
-                        <span class="tx-label">Status:</span>
-                        <span class="tx-value">Completed</span>
-                    </div>
-                    <div class="tx-status">
-                        ✅ Processed
-                    </div>
-                `;
-            }
-            
-            content.innerHTML = html;
-            modal.classList.add('active');
+            setTimeout(() => alert('Schedule a call: Select a time...'), 300);
         }
 
         function processTransfer() {
-            const fromAccount = document.getElementById('from-account').value;
-            const toAccount = document.getElementById('to-account').value;
             const amount = document.getElementById('transfer-amount').value;
-            
-            closeTxModal();
-            setTimeout(() => {
-                showSuccessModal(`Transfer Review:\nFrom: ${fromAccount}\nTo: ${toAccount}\nAmount: ${amount}\n\nConfirm to complete?`);
-            }, 300);
+            alert(`Transfer Review:\nAmount: ${amount}\n\nConfirm to complete?`);
         }
 
-        // Success Modal
-        function showSuccessModal(message) {
+        function showTransactionDetail(type) {
             const modal = document.getElementById('tx-detail-modal');
             const content = document.getElementById('tx-modal-content');
-            const title = document.getElementById('tx-modal-title');
+            document.getElementById('tx-modal-title').textContent = 'Transaction Details';
             
-            title.textContent = 'Success';
-            content.innerHTML = `
-                <div style="text-align: center; padding: 2rem;">
-                    <div style="font-size: 4rem; margin-bottom: 1rem;">✅</div>
-                    <p style="color: #00C48C; margin-bottom: 1rem;">${message}</p>
-                </div>
-                <button class="auth-button" onclick="closeTxModal()">OK</button>
-            `;
+            let details = '';
+            if (type === 'wire-transfer') {
+                details = `
+                    <div class="tx-detail" style="display: flex; justify-content: space-between; padding: 0.8rem 0; border-bottom: 1px solid #252530;">
+                        <span style="color: #9A9AB0;">Amount:</span>
+                        <span style="color: #FF5C5C;">-$42,500.00</span>
+                    </div>
+                    <div class="tx-detail" style="display: flex; justify-content: space-between; padding: 0.8rem 0; border-bottom: 1px solid #252530;">
+                        <span style="color: #9A9AB0;">To:</span>
+                        <span>Barclays London</span>
+                    </div>
+                    <div class="tx-status" style="text-align: center; padding: 1rem; background: #1E1E2A; border-radius: 8px; margin: 1rem 0; color: #00C48C;">✅ Completed</div>
+                `;
+            } else {
+                details = `<div class="tx-status" style="text-align: center; padding: 1rem; background: #1E1E2A; border-radius: 8px; margin: 1rem 0; color: #00C48C;">✅ Transaction complete</div>`;
+            }
+            
+            content.innerHTML = details;
+            modal.classList.add('active');
+        }
+
+        function showTransferDetail(type) {
+            const modal = document.getElementById('tx-detail-modal');
+            const content = document.getElementById('tx-modal-content');
+            document.getElementById('tx-modal-title').textContent = 'Transfer Details';
+            
+            let details = '';
+            if (type === 'to-jessica') {
+                details = `
+                    <div class="tx-detail" style="display: flex; justify-content: space-between; padding: 0.8rem 0; border-bottom: 1px solid #252530;">
+                        <span style="color: #9A9AB0;">Amount:</span>
+                        <span style="color: #FF5C5C;">-$250.00</span>
+                    </div>
+                    <div class="tx-detail" style="display: flex; justify-content: space-between; padding: 0.8rem 0; border-bottom: 1px solid #252530;">
+                        <span style="color: #9A9AB0;">To:</span>
+                        <span>Jessica Davis</span>
+                    </div>
+                    <div class="tx-status" style="text-align: center; padding: 1rem; background: #1E1E2A; border-radius: 8px; margin: 1rem 0; color: #00C48C;">✅ Completed</div>
+                `;
+            } else {
+                details = `<div class="tx-status" style="text-align: center; padding: 1rem; background: #1E1E2A; border-radius: 8px; margin: 1rem 0; color: #00C48C;">✅ Transfer complete</div>`;
+            }
+            
+            content.innerHTML = details;
             modal.classList.add('active');
         }
     </script>
